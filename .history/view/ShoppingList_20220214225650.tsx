@@ -1,0 +1,36 @@
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  SafeAreaView,
+  TextInput,
+} from "react-native";
+import CustomSafeAreaView from "../components/CustomSafeAreaView";
+
+const ShoppingList = () => {
+  const [searchBoxWidth, setSearchBoxWidth] = useState("80%");
+
+  return (
+    <CustomSafeAreaView>
+      <TextInput style={styles.outline}></TextInput>
+      <Text>Hello</Text>
+    </CustomSafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  outline: {
+    marginTop: 8,
+    paddingHorizontal: 8,
+    paddingVertical: 12,
+    borderColor: "rgb(16,120,92)",
+    borderWidth: 1,
+    borderRadius: 8,
+    marginHorizontal: 32,
+    textAlign: "center",
+  },
+});
+
+export default ShoppingList;
